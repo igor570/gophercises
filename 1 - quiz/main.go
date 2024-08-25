@@ -83,10 +83,6 @@ func timer(done chan bool) {
 	done <- true
 }
 
-func readInput(done chan bool) {
-
-}
-
 func openCSVFile(fileName string) *os.File {
 	file, err := os.Open(fileName)
 
@@ -106,7 +102,6 @@ func readCSVFile(file *os.File) [][]string {
 
 	if err != nil {
 		fmt.Println(err)
-
 	}
 
 	return questions
